@@ -1,0 +1,339 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="c9yrXWigiZymxp1mM6Gx">
+    <mxGraphModel dx="883" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="12000" pageHeight="16000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-91" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="270" width="200" x="1760" y="1730" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="EVEN- Design an Hotstar like application&amp;nbsp;&lt;div&gt;1. User login Service&lt;br&gt;2.Subscriber Service&lt;/div&gt;&lt;div&gt;3. Movie / Tv Search Service&amp;nbsp;&lt;/div&gt;&lt;div&gt;4. Movie/ Tv show Play Service&amp;nbsp;&lt;br&gt;&lt;br&gt;Optimize the application using CDC pipeline, Highlight where proxy design pattern can be used&amp;nbsp;&lt;br&gt;Use HLS and Dash for specific live/static content playing along with manifest style file&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="460" x="740" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Functional Requirements :&lt;div&gt;1. user login&amp;nbsp;&lt;/div&gt;&lt;div&gt;2. user subscribe&lt;/div&gt;&lt;div&gt;3. stream and watch movies and tv&lt;/div&gt;&lt;div&gt;4. search for movies and tv shows&lt;/div&gt;&lt;div&gt;5. should be able to do payment for subscriber model&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Non - Functional Requirements&amp;nbsp;&lt;/div&gt;&lt;div&gt;1. Latency (faster like 1.5 millon ) so needs to able to distribute and stream to all(500ms load time)&lt;/div&gt;&lt;div&gt;2. Availabiltiy &amp;gt;&amp;gt;&amp;gt; consistency should be able to watch&lt;/div&gt;&lt;div&gt;3. Change quality like 720p and 360 p&amp;nbsp;&lt;/div&gt;&lt;div&gt;4. search should be fase so less latency their as well&lt;/div&gt;&lt;div&gt;5. stability&amp;nbsp;&lt;/div&gt;&lt;div&gt;6. video should run smoothly even at low bandwidth connection so that user can stream continously&lt;/div&gt;&lt;div&gt;7. can add comments and likes&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="560" x="740" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="API endpoints:&amp;nbsp;&lt;div&gt;1. Post/login/user&lt;/div&gt;&lt;div&gt;{username,password}&lt;/div&gt;&lt;div&gt;2. Post/subscribe/details&lt;/div&gt;&lt;div&gt;{user meta data}&lt;/div&gt;&lt;div&gt;3. Post/subscribe/payments&lt;/div&gt;&lt;div&gt;{make payment or third party website}&lt;/div&gt;&lt;div&gt;4. get/search/name_of_file&lt;/div&gt;&lt;div&gt;{movie front display meta data and preview}&lt;/div&gt;&lt;div&gt;5. get/stream/name_of_file_id&lt;/div&gt;&lt;div&gt;6. get/user/user_id&lt;/div&gt;&lt;div&gt;{movie chunks and file}&lt;/div&gt;&lt;div&gt;7. get/movie_tv/movie_tv_id(for meta deta and like were other things about the moveis&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="480" x="740" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Databases:&lt;div&gt;1. users(userID,username,password,phone,subscribered_id)&lt;/div&gt;&lt;div&gt;2. subscribe(subscribe_id,subscribe_validity,subscribe_plan,subscribed(bool),subscribe_feautres)&lt;/div&gt;&lt;div&gt;3. movieDetails(movieID,moviename,time,date,...various other metadata as well as S3 chunk or metadata link)&lt;/div&gt;&lt;div&gt;4. Caches for various segments where we can reuse data as well as a&amp;nbsp; (CDN)&lt;/div&gt;&lt;div&gt;5. mongo database for movies and changes in them&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="620" x="740" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-88" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-87">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-8" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;" value="" vertex="1">
+          <mxGeometry height="78" width="78" x="490" y="1580" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-13" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="1730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-9" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;" value="" vertex="1">
+          <mxGeometry height="78" width="78" x="490" y="1700" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-10" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;" value="" vertex="1">
+          <mxGeometry height="78" width="78" x="491" y="1820" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-16" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="879" y="1295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-26" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="968" y="1550" />
+            </Array>
+            <mxPoint x="1260" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-40" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-11" parent="1" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" value="" vertex="1">
+          <mxGeometry height="178" width="178" x="790" y="1640" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-12" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-14" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="679" y="1859" />
+              <mxPoint x="679" y="1730" />
+              <mxPoint x="790" y="1730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-18" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-20" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="924" y="1313" />
+            </Array>
+            <mxPoint x="1540" y="1313" as="sourcePoint" />
+            <mxPoint x="923.4999999999995" y="1658" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-15" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/User_Resource.svg;" value="" vertex="1">
+          <mxGeometry height="70" width="67.2" x="1540" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-17" parent="1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance;fillColor=#2E73B8;gradientColor=none;" value="User DB" vertex="1">
+          <mxGeometry height="96.75" width="90" x="2120" y="1246.63" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Login Credintals" vertex="1">
+          <mxGeometry height="30" width="120" x="1140" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Jwt Token" vertex="1">
+          <mxGeometry height="30" width="60" x="1180" y="1313.38" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Check for&amp;nbsp; Authorization" vertex="1">
+          <mxGeometry height="30" width="260" x="1730" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Confirm Authorization" vertex="1">
+          <mxGeometry height="30" width="190" x="1780" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-25" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.992;entryY=0.865;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1864" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-29" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="_vw-1SuKX0GtTiV5aObK-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Subscribe Service" vertex="1">
+          <mxGeometry height="60" width="120" x="1200" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-28" parent="1" style="html=1;whiteSpace=wrap;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.payment;" value="" vertex="1">
+          <mxGeometry height="70" width="120" x="1380" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Third Pary Payment" vertex="1">
+          <mxGeometry height="30" width="120" x="1380" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-35" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-37" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="_vw-1SuKX0GtTiV5aObK-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="1450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-31" parent="1" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.kafka;" value="" vertex="1">
+          <mxGeometry height="49.41" width="66.7" x="1590" y="1529" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Kafka Producer" vertex="1">
+          <mxGeometry height="30" width="60" x="1593.35" y="1580" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-33" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-34" parent="1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mysql_db_instance_2;fillColor=#2E73B8;gradientColor=none;" value="Subscribe DB" vertex="1">
+          <mxGeometry height="84" width="80" x="1910" y="1511.7" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-38" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_vw-1SuKX0GtTiV5aObK-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-36" parent="1" style="whiteSpace=wrap;html=1;" value="Notificaiton Service" vertex="1">
+          <mxGeometry height="60" width="120" x="1430" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-41" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1760" y="1810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-39" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.elasticsearch_service;" value="Amazon Elasticsearch Service" vertex="1">
+          <mxGeometry height="120" width="80" x="1430" y="1750" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-44" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-43">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1854" y="1850" />
+              <mxPoint x="1854" y="1850" />
+            </Array>
+            <mxPoint x="1830" y="1838" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-43" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.connector;" value="" vertex="1">
+          <mxGeometry height="29" width="78" x="1821" y="1898" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Connector Service" vertex="1">
+          <mxGeometry height="30" width="60" x="1830" y="1940" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-50" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-48" parent="1" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.mongodb" value="Mongo DB" vertex="1">
+          <mxGeometry height="86.2" width="41.2" x="1449.4" y="1927" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-56" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-51" parent="1" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.mps-produce;" value="" vertex="1">
+          <mxGeometry height="60" width="69.26" x="1340" y="2260" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-52" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.667;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-51">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="2290" />
+              <mxPoint x="1340" y="2290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Stream Service" vertex="1">
+          <mxGeometry height="30" width="110" x="1309.2600000000002" y="2340" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-58" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-57" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-54" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/API_Proxy.svg;" value="" vertex="1">
+          <mxGeometry height="88" width="88" x="1742" y="2246" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-63" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-107" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-57" parent="1" style="whiteSpace=wrap;html=1;verticalAlign=top;labelBackgroundColor=default;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Netflix&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;Backend&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1726" y="2092" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-59" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Proxy Service" vertex="1">
+          <mxGeometry height="30" width="60" x="1756" y="2320" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="We need proxy so that the user cannot directly access the netflix Backend" vertex="1">
+          <mxGeometry height="80" width="170" x="1572" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-62" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.s3;" value="Amazon S3" vertex="1">
+          <mxGeometry height="100" width="80" x="2100" y="2072" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-65" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-54" style="endArrow=classic;html=1;rounded=0;exitX=0.994;exitY=0.502;exitDx=0;exitDy=0;exitPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-62" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1880" y="2290" as="sourcePoint" />
+            <mxPoint x="1930" y="2240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-72" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;" target="_vw-1SuKX0GtTiV5aObK-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-73" connectable="0" parent="_vw-1SuKX0GtTiV5aObK-72" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Store Chunks" vertex="1">
+          <mxGeometry relative="1" x="0.0949" y="4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-74" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2370" y="2460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-66" parent="1" style="whiteSpace=wrap;html=1;" value="CHUNKER" vertex="1">
+          <mxGeometry height="60" width="120" x="2310" y="2244.8" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-68" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-69" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_vw-1SuKX0GtTiV5aObK-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-67" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;" value="" vertex="1">
+          <mxGeometry height="58.8" width="70" x="2105" y="2246" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="To Store files like the chunker meta data and link them with s3 as the chunks are generated&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="180" x="2050" y="2320" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Uses Two Protocols:&lt;br&gt;HLS&lt;div&gt;DASH&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="190" x="2275" y="2200" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-79" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="_vw-1SuKX0GtTiV5aObK-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-75" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=30;direction=west;" value="Video Encoder" vertex="1">
+          <mxGeometry height="60" width="200" x="2280" y="2460" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-76" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Makes the file in two formats&amp;nbsp;&lt;div&gt;1. mp4&lt;/div&gt;&lt;div&gt;2. ts&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="280" x="2450" y="2475" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-84" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="_vw-1SuKX0GtTiV5aObK-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-78" parent="1" style="whiteSpace=wrap;html=1;" value="Manifes File 1&lt;div&gt;1. bitrate&amp;nbsp;&lt;/div&gt;&lt;div&gt;2. types of quality&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. some other Detals&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="250" x="1960" y="2570" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-83" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_vw-1SuKX0GtTiV5aObK-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-80" parent="1" style="whiteSpace=wrap;html=1;" value="For each streamin service quality&amp;nbsp;&lt;div&gt;1. we have the chunsks and their links&amp;nbsp;&lt;/div&gt;&lt;div&gt;and all the details like how long and other meta data about the particular quality chunks&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="260" x="1430" y="2570" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-81" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.014;entryY=0.456;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-85" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="_vw-1SuKX0GtTiV5aObK-67">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1855" y="2280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-82" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Manifest FIle&amp;nbsp;&lt;div&gt;Thes two file make manifest file&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="1750" y="2920" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-86" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Qualities Like :&lt;div&gt;1080p&lt;/div&gt;&lt;div&gt;720p&lt;/div&gt;&lt;div&gt;480o&lt;/div&gt;&lt;div&gt;360p&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;of 7-12 sec chunks&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85.2" width="270" x="2430" y="2244.8" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-87" parent="1" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.cdn_content_distribution_network;" value="" vertex="1">
+          <mxGeometry height="83.77" width="101" x="479.5" y="1246.6299999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-89" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CDN" vertex="1">
+          <mxGeometry height="30" width="60" x="499" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-90" parent="1" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.queue_generic" value="Streaming Service&amp;nbsp;" vertex="1">
+          <mxGeometry height="27" width="90" x="1809" y="1791" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-92" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Blob Storage for files&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="170" x="2180" y="2100" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-97" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1740" y="2290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-93" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.data;" value="" vertex="1">
+          <mxGeometry height="89.73" width="74" x="1540" y="2360" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-94" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Movie Meta Data&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="100" x="1530" y="2460" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-95" edge="1" parent="1" source="_vw-1SuKX0GtTiV5aObK-51" style="endArrow=classic;html=1;rounded=0;entryX=-0.026;entryY=0.171;entryDx=0;entryDy=0;entryPerimeter=0;" target="_vw-1SuKX0GtTiV5aObK-93" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1440" y="2400" as="sourcePoint" />
+            <mxPoint x="1530" y="2370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-96" connectable="0" parent="_vw-1SuKX0GtTiV5aObK-95" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="to show file page and preview&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="0.0221" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-106" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Manifest files" vertex="1">
+          <mxGeometry height="30" width="60" x="2110" y="2370" as="geometry" />
+        </mxCell>
+        <mxCell id="_vw-1SuKX0GtTiV5aObK-108" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="BLOB storage" vertex="1">
+          <mxGeometry height="30" width="60" x="2110" y="2030" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
